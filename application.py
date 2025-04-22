@@ -36,7 +36,7 @@ def generate_prompt(Email_tone, CreatedBody):
     # template="""Enhance {CreatedBody} by fixing grammar and spelling, and updating the tone to {Email_tone} based on the received email: {Received_emailBody}"""
     # template="""Update the email tone to {Email_tone}, by correcting the grammar and spelling of email body : {CreatedBody}"""
 
-    template = f"""Please rewrite the following email in a {Email_tone} tone, correcting grammar and spelling:
+    template = f"""rewrite the following email in a {Email_tone} tone, correcting grammar and spelling:
                     "{CreatedBody}" """
     single_line_template = re.sub(r'\s+', ' ', template).strip()
     print(single_line_template)
