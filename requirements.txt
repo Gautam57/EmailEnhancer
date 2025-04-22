@@ -1,9 +1,10 @@
-ctransformers
-langchain
 streamlit
-langchain-community
 llama-cpp-python
-torch
 transformers
 altair==4.2.2
 huggingface_hub
+
+# ctransformers
+# langchain
+# langchain-community
+# torch

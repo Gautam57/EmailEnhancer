@@ -1,10 +1,4 @@
 import streamlit as st
-# st.set_option('server.enableCORS', False)
-# st.set_option('server.enableXsrfProtection', False)
-# st.set_option('server.fileWatcherType', none)  # 👈 Disables the problematic watcher
-
-from langchain.prompts import PromptTemplate
-from langchain_community.llms import CTransformers
 
 from llama_cpp import Llama
 
@@ -12,6 +6,14 @@ import re
 import time
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# st.set_option('server.enableCORS', False)
+# st.set_option('server.enableXsrfProtection', False)
+# st.set_option('server.fileWatcherType', none)  # 👈 Disables the problematic watcher
+
+# from langchain.prompts import PromptTemplate
+# from langchain_community.llms import CTransformers
+
 
 @st.cache_resource
 def load_llama_model():
@@ -32,7 +34,6 @@ def generate_prompt(Email_tone, CreatedBody):
      ## Prompt Template
 
     # template="""Enhance {CreatedBody} by fixing grammar and spelling, and updating the tone to {Email_tone} based on the received email: {Received_emailBody}"""
-
     # template="""Update the email tone to {Email_tone}, by correcting the grammar and spelling of email body : {CreatedBody}"""
 
     template = f"""Please rewrite the following email in a {Email_tone} tone, correcting grammar and spelling:
