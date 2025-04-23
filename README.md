@@ -75,6 +75,8 @@ Effective prompts are critical when using LLMs locally due to resource constrain
 - Experiment with different models to find the optimal balance of performance and result quality.
 - This project is ideal for learning how to deploy LLMs locally and practice prompt engineering.
 
+---
+
 ## 📷 Model Preview
 
 ![Model Preview](modelPreview_1.png)
